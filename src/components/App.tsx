@@ -1,17 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 
 const App: React.FC<{}> = () => {
-  console.log('ssss');
-
-  const a = (asdas: string): void => {
-    console.log(asdas);
-  };
-
-  const [b, setA] = useState('s');
-  useEffect(() => {});
-
   return (
     <div className="App">
       <header className="App-header">
