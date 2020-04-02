@@ -1,4 +1,9 @@
+build/
 public/
 node_modules/
+config/
+scripts/
+src/react-app-env.d.ts
+src/serviceWorker.ts
 yarn.lock
 package.json
