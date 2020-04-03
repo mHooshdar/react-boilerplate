@@ -1,7 +1,7 @@
 // node_modules
 import { action } from 'typesafe-actions';
 
-export const enum AppActionTypes {
+export enum AppActionTypes {
   ENABLE_TEST = '@@app/ENABLE_TEST',
   DISABLE_TEST = '@@app/DISABLE_TEST',
 }

@@ -1,0 +1,77 @@
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.b-radius {
+  border-radius: $radius-size;
+}
+
+.w-bold {
+  font-weight: bold;
+}
+
+.rtl {
+  direction: rtl;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.block {
+  display: block;
+}
+
+.text-decoration-underline {
+  text-decoration: underline;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.none {
+  display: none;
+}
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-gray {
+    color: $text-gray;
+  }
+
+  &-white {
+    color: $white;
+  }
+
+  &-dark {
+    color: $text-dark;
+  }
+
+  &-black {
+    color: $black;
+  }
+}

@@ -42,5 +42,6 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     'array-callback-return': 'off',
     'no-unused-expressions': 'off',
+    'react/prop-types': 'off',
   },
 };

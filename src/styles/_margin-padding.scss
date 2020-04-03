@@ -1,0 +1,100 @@
+$base-size: 5px;
+
+$sides: (
+  '': (
+    left,
+    right,
+    top,
+    bottom,
+  ),
+  l: (
+    left,
+  ),
+  r: (
+    right,
+  ),
+  t: (
+    top,
+  ),
+  b: (
+    bottom,
+  ),
+  y: (
+    top,
+    bottom,
+  ),
+  x: (
+    left,
+    right,
+  ),
+);
+
+$breakpoints: (
+  '': 0,
+  '-sm': 768px,
+  '-md': 992px,
+  '-lg': 1200px,
+);
+
+$sizes: (
+  // Class prefixes for different margin and padding
+    '-1': $base-size,
+  '-2': $base-size * 2,
+  '-3': $base-size * 3,
+  '-4': $base-size * 4,
+  '-5': $base-size * 5,
+  '-6': $base-size * 6,
+  '-auto': auto,
+  '-0': 0
+);
+
+@mixin minWidth($width) {
+  @if ($width <=0) {
+    @content;
+  } @else {
+    @media (min-width: $width) {
+      @content;
+    }
+  }
+}
+
+// Sample mx-5, my-4-lg, pl-0, mx-auto
+@each $breakpointPrefix, $breakpoint in $breakpoints {
+  @each $sidePrefix, $side in $sides {
+    @each $sizePrefix, $size in $sizes {
+      @include minWidth($breakpoint) {
+        @if ($size==auto) {
+          .m#{$sidePrefix}#{$sizePrefix}#{$breakpointPrefix} {
+            @if (length($side) < 4) {
+              @each $s in $side {
+                @if ($s != 'top' and $s != 'bottom') {
+                  margin-#{$s}: $size !important;
+                }
+              }
+            }
+          }
+        } @else if ($size !=auto or index($sidePrefix, (x, l, r)) !=null) {
+          .p#{$sidePrefix}#{$sizePrefix}#{$breakpointPrefix} {
+            @if (length($side) >=4) {
+              padding: $size !important;
+            } @else {
+              @each $s in $side {
+                padding-#{$s}: $size !important;
+              }
+            }
+          }
+
+          .m#{$sidePrefix}#{$sizePrefix}#{$breakpointPrefix} {
+            @if (length($side) >=4) {
+              margin: $size !important;
+            } @else {
+              @each $s in $side {
+                margin-#{$s}: $size !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

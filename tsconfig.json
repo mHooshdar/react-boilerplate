@@ -9,14 +9,16 @@
       "@assets/*": ["assets/*"],
       "@components/*": ["components/*"],
       "@constants/*": ["constants/*"],
+      "@hocs/*": ["hocs/*"],
       "@hooks/*": ["hooks/*"],
+      "@layouts/*": ["layouts/*"],
       "@models/*": ["models/*"],
       "@pages/*": ["pages/*"],
       "@reducers/*": ["reducers/*"],
       "@sagas/*": ["sagas/*"],
       "@stores/*": ["stores/*"],
-      "@utils/*": ["utils/*"],
-      "@hocs/*": ["hocs/*"]
+      "@styles/*": ["styles/*"],
+      "@utils/*": ["utils/*"]
     },
     "allowJs": true,
     "skipLibCheck": true,

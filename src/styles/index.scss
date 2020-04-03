@@ -1,0 +1,13 @@
+@import 'colors';
+@import 'reset';
+@import 'variables';
+@import 'flex';
+@import 'global';
+@import 'margin-padding';
+@import 'scroll';
+
+body {
+  &.modal-open {
+    overflow: hidden;
+  }
+}
