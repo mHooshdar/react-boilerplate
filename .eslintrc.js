@@ -39,5 +39,8 @@ module.exports = {
         jsx: 'never',
       },
     ],
+    '@typescript-eslint/explicit-function-return-type': 'off',
+    'array-callback-return': 'off',
+    'no-unused-expressions': 'off',
   },
 };

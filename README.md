@@ -1,5 +1,6 @@
 classnames, prettiers, stylelint, eslint, node-sass
 
+https://github.com/piotrwitek/react-redux-typescript-guide
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

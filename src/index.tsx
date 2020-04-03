@@ -1,12 +1,30 @@
+// node_modules
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { Provider, ReactReduxContext } from 'react-redux';
+import { createHashHistory } from 'history';
+// components
 import App from '@components/App';
+// config
+import configureStore from '@stores/configureStore';
+// serviceWorker
 import * as serviceWorker from './serviceWorker';
+// styles
+import './index.css';
+
+const history = createHashHistory({
+  // basename: '',
+  // hashType: 'slash' //Hugh does not work!
+});
+
+const initialState = window.initialReduxState;
+const store = configureStore(history, initialState);
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store} context={ReactReduxContext}>
+      <App />
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root'),
 );
