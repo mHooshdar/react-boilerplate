@@ -1,5 +1,3 @@
-const path = require('path');
-
 module.exports = {
   extends: [
     'airbnb',
@@ -27,7 +25,6 @@ module.exports = {
     node: true,
   },
   rules: {
-    'no-console': 'error',
     'react/jsx-filename-extension': [1, { extensions: ['.ts', '.tsx'] }],
     'import/extensions': [
       'error',

@@ -6,6 +6,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 // components
 const AppRouter = lazy(() => import('@pages/AppRouter'));
 const LoginRouter = lazy(() => import('@pages/LoginRouter'));
@@ -13,6 +14,9 @@ const LoginRouter = lazy(() => import('@pages/LoginRouter'));
 const App: React.FC<{}> = () => {
   return (
     <>
+      <Helmet>
+        <title>App</title>
+      </Helmet>
       <Router>
         <Suspense fallback="">
           <Switch>
