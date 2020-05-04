@@ -1,8 +1,14 @@
-classnames, prettiers, stylelint, eslint, node-sass
-
-https://github.com/piotrwitek/react-redux-typescript-guide
+# React Boilerplate
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+We eject it and add some webpack configs with eslint rules.
+
+This project has been writed with typescript.
+
+## Packages
+
+This project has `axios`, `classnames`, `redux`, `redux-saga`, `eslint`, `stylelint`, `jest`, `react-router`, `node-sass`(for scss), `standard-version`
 
 ## Available Scripts
 
@@ -31,17 +37,29 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
+### `yarn eslint`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+We use this script for linting the `ts` and `tsx` files. We use `airbnb` and `typescript/recommended` rules for linting.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `yarn stylelint`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+We use this script for linting the `scss` and `css` files. We use `stylelint-config-recommended` rules for style linting.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### `yarn lint`
 
-## Learn More
+This script will run `yarn eslint` and `yarn styleling` together.
+
+### `yarn release`
+
+This command will run `standard-version` for setting semantic versioning. We have to use `conventional commits` for commit messages to use on `standard-version` CHANGELOG.
+
+## Comments
+
+We have husky before our commits. We need to follow the `conventional commits` rules. husky will preserve that and it will run the linters just before our commits.
+
+Check this link too. It's usefull for typescripts rules:
+
+https://github.com/piotrwitek/react-redux-typescript-guide
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
