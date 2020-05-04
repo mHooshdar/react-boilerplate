@@ -5,6 +5,7 @@ module.exports = {
       2,
       'always',
       [
+        'build',
         'chore',
         'ci',
         'docs',
@@ -12,11 +13,14 @@ module.exports = {
         'fix',
         'perf',
         'refactor',
-        'release',
         'revert',
+        'init',
+        'dev',
+        'pkg',
         'style',
         'test',
         'wip',
+        'misc'
       ],
     ],
   },
