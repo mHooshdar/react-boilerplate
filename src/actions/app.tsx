@@ -6,7 +6,5 @@ export enum AppActionTypes {
   DISABLE_TEST = '@@app/DISABLE_TEST',
 }
 
-export const enableTest = (data?: {}) =>
-  action(AppActionTypes.ENABLE_TEST, data);
-export const disableTest = (data?: {}) =>
-  action(AppActionTypes.DISABLE_TEST, data);
+export const enableTest = (data?: {}) => action(AppActionTypes.ENABLE_TEST, data);
+export const disableTest = (data?: {}) => action(AppActionTypes.DISABLE_TEST, data);

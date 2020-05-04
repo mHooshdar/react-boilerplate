@@ -6,8 +6,8 @@ import widths from '@constants/widths';
 const useDevice = (deviceWidth?: number) => {
   const width = deviceWidth
     ? {
-        width: deviceWidth,
-      }
+      width: deviceWidth,
+    }
     : undefined;
   const isWideDesktop = useMediaQuery(
     {

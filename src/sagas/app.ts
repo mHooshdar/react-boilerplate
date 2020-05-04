@@ -1,5 +1,7 @@
 // node_modules
-import { all, call, put, takeEvery } from 'redux-saga/effects';
+import {
+  all, call, put, takeEvery,
+} from 'redux-saga/effects';
 // actions
 import { AppActionTypes, enableTest, disableTest } from '@actions/app';
 import { ReduxAction } from '@models/action';

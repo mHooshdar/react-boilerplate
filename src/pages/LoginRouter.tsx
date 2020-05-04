@@ -5,7 +5,5 @@ import '@styles/login/index.scss';
 
 type AllProps = {};
 
-const LoginRouter: React.FC<AllProps> = () => {
-  return <div>Login</div>;
-};
+const LoginRouter: React.FC<AllProps> = () => <div>Login</div>;
 export default LoginRouter;

@@ -18,21 +18,13 @@ const requestConfig: RequestConfig = {
 
 const instance = axios.create(requestConfig);
 
-const getDispatch = (url: string, payload: {}) => {
-  return instance.get(url, payload);
-};
+const getDispatch = (url: string, payload: {}) => instance.get(url, payload);
 
-const postDispatch = (url: string, payload: {}) => {
-  return instance.post(url, payload);
-};
+const postDispatch = (url: string, payload: {}) => instance.post(url, payload);
 
-const putDispatch = (url: string, payload: {}) => {
-  return instance.put(url, payload);
-};
+const putDispatch = (url: string, payload: {}) => instance.put(url, payload);
 
-const deleteDispatch = (url: string, payload: {}) => {
-  return instance.delete(url, payload);
-};
+const deleteDispatch = (url: string, payload: {}) => instance.delete(url, payload);
 
 function generateUrl(partialUrl: string, params: object | null = null) {
   let url = BASE_URL + partialUrl;
@@ -69,9 +61,7 @@ const self = function dispatch(
 
   return new Promise((resolve, reject) => {
     body(url, payload)
-      .then((data: { data: object }) => {
-        return resolve(data.data);
-      })
+      .then((data: { data: object }) => resolve(data.data))
       .catch((err: { response: { status: number } | undefined }) => {
         if (err.response && err.response.status === 401) {
           // unauthorize

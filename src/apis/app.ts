@@ -16,12 +16,8 @@ const urls = {
 
 function api() {
   return {
-    enableTest: (data: RequestData) => {
-      return Dispatch(urls.enableTest, data.payload);
-    },
-    disableTest: (data: RequestData) => {
-      return Dispatch(urls.disableTest, data.payload);
-    },
+    enableTest: (data: RequestData) => Dispatch(urls.enableTest, data.payload),
+    disableTest: (data: RequestData) => Dispatch(urls.disableTest, data.payload),
   };
 }
 

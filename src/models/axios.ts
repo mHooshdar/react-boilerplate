@@ -20,7 +20,8 @@ export interface RequestConfig {
 /**
  *  params: Object will be uses in axios URL
  *  payload: the data will be send as Http Request payload (file or JSON object)
- *  onSuccessCallback: the function should call after request success: To prevent manipulating store (sample usecase : close modal on success)
+ *  onSuccessCallback: the function should call after request success:
+ *     To prevent manipulating store (sample usecase : close modal on success)
  *  onErrorCallback: to show error in component without manipulating store
  */
 export interface RequestData {

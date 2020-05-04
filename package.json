@@ -77,17 +77,14 @@
     "test": "node scripts/test.js",
     "lint": "yarn eslint && yarn stylelint",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "stylelint": "stylelint '**/*.scss'",
-    "prettier": "prettier --write \"**/*.{ts,tsx,js,scss,css}\""
+    "stylelint": "stylelint '**/*.scss'"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "prettier --write",
       "eslint . --ext .js,.jsx,.ts,.tsx"
     ],
     "*.{scss,css)": [
-      "stylelint --syntax=scss",
-      "prettier --write"
+      "stylelint --syntax=scss"
     ]
   },
   "browserslist": {
@@ -118,22 +115,17 @@
     "commitlint": "^8.3.5",
     "eslint": "^6.8.0",
     "eslint-config-airbnb": "^18.1.0",
-    "eslint-config-prettier": "^6.10.1",
     "eslint-import-resolver-typescript": "^2.0.0",
     "eslint-loader": "^3.0.4",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-jest": "^23.8.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "node-sass": "^4.13.1",
-    "prettier": "^2.0.2",
     "stylelint": "^13.2.1",
-    "stylelint-config-prettier": "^8.0.1",
-    "stylelint-config-recommended": "^3.0.0",
-    "stylelint-prettier": "^1.1.2"
+    "stylelint-config-recommended": "^3.0.0"
   }
 }

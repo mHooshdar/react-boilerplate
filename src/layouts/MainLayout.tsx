@@ -3,13 +3,11 @@ import React from 'react';
 
 type AllProps = {};
 
-const MainLayout: React.FC<AllProps> = ({ children }) => {
-  return (
-    <>
-      Main layout
-      {children}
-    </>
-  );
-};
+const MainLayout: React.FC<AllProps> = ({ children }) => (
+  <>
+    Main layout
+    {children}
+  </>
+);
 
 export default MainLayout;
