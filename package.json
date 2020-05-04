@@ -1,6 +1,6 @@
 {
   "name": "react-boilerplate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@svgr/webpack": "^4.3.3",
@@ -75,9 +75,10 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "lint": "yarn eslint && yarn stylelint",
+    "lint": "yarn stylelint && yarn eslint",
     "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "stylelint": "stylelint '**/*.scss'"
+    "stylelint": "stylelint '**/*.scss'",
+    "release": "standard-version"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -125,6 +126,7 @@
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
     "node-sass": "^4.13.1",
+    "standard-version": "^7.1.0",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended": "^3.0.0"
   }
