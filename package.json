@@ -84,7 +84,7 @@
     "*.{js,jsx,ts,tsx}": [
       "eslint . --ext .js,.jsx,.ts,.tsx"
     ],
-    "*.{scss,css)": [
+    "*.{scss,css}": [
       "stylelint --syntax=scss"
     ]
   },
