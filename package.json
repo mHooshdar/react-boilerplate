@@ -125,7 +125,7 @@
     "eslint-plugin-react-hooks": "^3.0.0",
     "husky": "^4.2.3",
     "lint-staged": "^10.1.1",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "standard-version": "^7.1.0",
     "stylelint": "^13.2.1",
     "stylelint-config-recommended": "^3.0.0"
